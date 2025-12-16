@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 必備資安標頭 -->
+    <!-- 1. Content Security Policy - 防止XSS攻擊，只允許自己的資源和必要的外部資源 -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+
+    <!-- 2. X-Frame-Options - 防止點擊劫持攻擊 -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+
+    <!-- 3. X-Content-Type-Options - 防止MIME類型混淆攻擊 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- 4. Strict-Transport-Security - 強制使用HTTPS -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+
+    <title>魔術師聲音訓練專家 | 子超</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero Section - 第一屏 -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">讓您的聲音成為最強大的魔術道具</h1>
+                <h2 class="hero-subtitle">90%的魔術師不知道，聲音正是他們與頂尖表演者的最大差距</h2>
+
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-text">台灣唯一專注魔術師的聲音訓練專家</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-text">限時提供50個免費聲音檢測名額</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <button class="cta-button primary" onclick="scrollToSection('free-offer')">立即預約免費30分鐘聲音檢測</button>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="trust-text">超過300位魔術師推薦 | 國際認證聲音教練 | 10年魔術表演經驗</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points - 第二屏 -->
+    <section id="pain-points" class="pain-points-section">
+        <div class="container">
+            <h2 class="section-title">您是否也有這些困擾？</h2>
+
+            <div class="pain-points-grid">
+                <div class="pain-point">
+                    <div class="pain-icon">❌</div>
+                    <h3>技術純熟，觀眾反應卻總是平平？</h3>
+                    <p>明明手法練了上千次，效果卻不如預期</p>
+                </div>
+
+                <div class="pain-point">
+                    <div class="pain-icon">❌</div>
+                    <h3>表演時聲音緊張、發抖或破音？</h3>
+                    <p>關鍵時刻聲音失控，破壞整體演出</p>
+                </div>
+
+                <div class="pain-point">
+                    <div class="pain-icon">❌</div>
+                    <h3>無法用聲音有效引導觀眾注意力？</h3>
+                    <p>Misdirection只靠動作，缺少聲音配合</p>
+                </div>
+
+                <div class="pain-point">
+                    <div class="pain-icon">❌</div>
+                    <h3>整場表演聲音平淡，缺乏層次？</h3>
+                    <p>從頭到尾一個調，觀眾越看越想睡</p>
+                </div>
+
+                <div class="pain-point">
+                    <div class="pain-icon">❌</div>
+                    <h3>不知道自己聲音哪裡有問題？</h3>
+                    <p>沒有專業診斷，永遠在原地打轉</p>
+                </div>
+            </div>
+
+            <div class="transition-text">
+                <p>如果您有以上任何一個問題，那麼...</p>
+                <blockquote>「您需要的不是更多練習，而是正確的聲音訓練」</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution - 第三屏 -->
+    <section id="solution" class="solution-section">
+        <div class="container">
+            <h2 class="section-title">獨家M.A.G.I.C.聲音訓練系統</h2>
+            <p class="section-subtitle">專為魔術師設計的聲音訓練法，5大核心技術全面提升您的表演魅力</p>
+
+            <div class="magic-system">
+                <div class="magic-item">
+                    <div class="magic-letter">M</div>
+                    <div class="magic-content">
+                        <h3>Modulation 音調變化</h3>
+                        <p>學會運用高低音創造情緒起伏</p>
+                    </div>
+                </div>
+
+                <div class="magic-item">
+                    <div class="magic-letter">A</div>
+                    <div class="magic-content">
+                        <h3>Attention 注意力引導</h3>
+                        <p>用聲音精準控制觀眾視線</p>
+                    </div>
+                </div>
+
+                <div class="magic-item">
+                    <div class="magic-letter">G</div>
+                    <div class="magic-content">
+                        <h3>Gesture 手勢聲音配合</h3>
+                        <p>讓聲音與動作完美同步</p>
+                    </div>
+                </div>
+
+                <div class="magic-item">
+                    <div class="magic-letter">I</div>
+                    <div class="magic-content">
+                        <h3>Impact 衝擊力營造</h3>
+                        <p>在關鍵時刻創造最大驚喜</p>
+                    </div>
+                </div>
+
+                <div class="magic-item">
+                    <div class="magic-letter">C</div>
+                    <div class="magic-content">
+                        <h3>Connection 觀眾連結</h3>
+                        <p>建立獨特的個人聲音魅力</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-guarantee">
+                <h3>成效保證</h3>
+                <div class="guarantee-items">
+                    <div class="guarantee-item">2-3週看見明顯改變</div>
+                    <div class="guarantee-item">8週建立個人聲音風格</div>
+                    <div class="guarantee-item">觀眾反應提升200%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me - 第四屏 -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">您的聲音魔法導師</h2>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="media/me.webp" alt="子超 - 魔術師聲音訓練專家" class="teacher-photo">
+                    <img src="media/me2.webp" alt="子超 - 演講現場" class="teacher-photo speaking-photo">
+                </div>
+
+                <div class="about-text">
+                    <div class="teacher-name">
+                        <h3>子超</h3>
+                        <p class="teacher-title">台灣唯一魔術師聲音訓練專家</p>
+                    </div>
+
+                    <blockquote class="core-belief">
+                        「聲音，是魔術師最容易忽略，卻最能創造奇蹟的武器。」
+                    </blockquote>
+
+                    <blockquote class="teaching-belief">
+                        「我不改變您的風格，我讓您的聲音成為風格的一部分」
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services - 第五屏 -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> 為您量身打造的訓練方案</h2>
+
+            <div class="pricing-table">
+                <div class="pricing-plan free">
+                    <h3>免費體驗</h3>
+                    <div class="price">免費</div>
+                    <div class="duration">30分鐘</div>
+                    <ul class="features">
+                        <li class="included">專業檢測</li>
+                        <li class="included">個人分析報告</li>
+                        <li class="included">3個改善建議</li>
+                        <li class="excluded">❌ 訓練時數</li>
+                        <li class="excluded">❌ 練習影片教材</li>
+                        <li class="excluded">❌ 一對一指導</li>
+                    </ul>
+                    <button class="plan-button" onclick="scrollToSection('free-offer')">先試試免費檢測</button>
+                </div>
+
+                <div class="pricing-plan standard">
+                    <h3>標準方案</h3>
+                    <div class="price">NT$18,000 - 24,000</div>
+                    <div class="duration">8週</div>
+                    <ul class="features">
+                        <li class="included">專業檢測</li>
+                        <li class="included">個人分析報告</li>
+                        <li class="included">完整深度改善建議</li>
+                        <li class="included">1小時訓練時數</li>
+                        <li class="included">練習影片教材</li>
+                        <li class="excluded">❌ 一對一指導</li>
+                    </ul>
+                    <button class="plan-button" onclick="openContactModal()">立即選擇方案</button>
+                </div>
+
+                <div class="pricing-plan professional">
+                    <h3>專業方案</h3>
+                    <div class="price">NT$36,000 - 48,000</div>
+                    <div class="duration">12週</div>
+                    <div class="popular-badge">最受歡迎</div>
+                    <ul class="features">
+                        <li class="included">專業檢測</li>
+                        <li class="included">個人分析報告</li>
+                        <li class="included">每週改善建議</li>
+                        <li class="included">2小時訓練時數</li>
+                        <li class="included">練習影片教材</li>
+                        <li class="included">一對一指導</li>
+                    </ul>
+                    <button class="plan-button" onclick="openContactModal()">立即選擇方案</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials - 第六屏 -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">300+位魔術師的改變見證</h2>
+
+            <div class="testimonials-carousel">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                            <blockquote>「以前總覺得表演少了什麼，原來是聲音！現在觀眾的反應完全不同了，商演價碼也提升了50%。」</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-name">陳○○</div>
+                            <div class="author-info">職業魔術師 / 從業8年</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                            <blockquote>「聲音訓練後，我的近景魔術更有說服力，觀眾更容易被帶入情境，小費收入增加了一倍。」</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-name">李○○</div>
+                            <div class="author-info">近景魔術師 / 從業5年</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                            <blockquote>「參加比賽終於得名了！評審說我的聲音表現是致勝關鍵。」</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-name">王○○</div>
+                            <div class="author-info">舞台魔術師 / 從業3年</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <div class="success-stats">
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">學員滿意度</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">比賽獲獎率提升</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">平均收入增長</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Offer - 第七屏 -->
+    <section id="free-offer" class="free-offer-section">
+        <div class="container">
+            <h2 class="section-title">價值NT$3,000的專業聲音檢測</h2>
+            <h3 class="section-subtitle">現在完全免費 - 僅限50個名額</h3>
+
+            <div class="offer-content">
+                <div class="offer-details">
+                    <div class="offer-item">
+                        <h4>1. 專業聲音分析</h4>
+                        <ul>
+                            <li>音質、音調、節奏全面評估</li>
+                            <li>找出5個關鍵改善點</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer-item">
+                        <h4>2. 即時改善示範</h4>
+                        <ul>
+                            <li>現場體驗調整前後差異</li>
+                            <li>學會3個立即可用技巧</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer-item">
+                        <h4>3. 個人化建議報告</h4>
+                        <ul>
+                            <li>專屬訓練方向建議</li>
+                            <li>自主練習方法指導</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="booking-form">
+                    <form id="freeOfferForm">
+                        <div class="form-group">
+                            <label for="name">姓名 *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">手機 *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">表演年資</label>
+                            <select id="experience" name="experience">
+                                <option value="">請選擇</option>
+                                <option value="1-2年">1-2年</option>
+                                <option value="3-5年">3-5年</option>
+                                <option value="6-10年">6-10年</option>
+                                <option value="10年以上">10年以上</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="problems">想改善的問題（選填）</label>
+                            <textarea id="problems" name="problems" rows="3" placeholder="例：聲音緊張、音調平淡、無法引導注意力..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="schedule">方便時段</label>
+                            <select id="schedule" name="schedule">
+                                <option value="">請選擇</option>
+                                <option value="平日早上">平日早上</option>
+                                <option value="平日下午">平日下午</option>
+                                <option value="平日晚上">平日晚上</option>
+                                <option value="假日早上">假日早上</option>
+                                <option value="假日下午">假日下午</option>
+                                <option value="假日晚上">假日晚上</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="cta-button primary">確認預約</button>
+                    </form>
+
+                    <div class="urgency-indicators">
+                        <div class="urgency-item">
+                            <span>本月僅剩 <span id="remainingSlots">13</span> 個免費名額</span>
+                        </div>
+                        <div class="urgency-item">
+                            <span>已有 <span id="bookedSlots">37</span> 位魔術師成功預約</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ - 第八屏 -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">您可能想知道</h2>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>我是業餘魔術師，適合參加嗎？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>只要有1年以上表演經驗都適合。業餘轉專業，聲音是關鍵。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>線上訓練有效果嗎？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>我們採用線上線下混合模式，確保最佳訓練效果。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>需要準備什麼設備？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>免費檢測不需任何設備。正式課程只需手機和安靜空間。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>如果沒有時間固定上課怎麼辦？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>提供彈性排課和課程錄影，配合您的時間。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>真的完全免費嗎？沒有隱藏費用？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>30分鐘檢測100%免費，無任何強迫推銷。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Limited Offer - 第九屏 -->
+    <section id="limited-offer" class="limited-offer-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-clock"></i> 特別限時優惠 - 僅到12月31日</h2>
+
+            <div class="offer-benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-gift"></i>
+                    <span>標準方案 - 加贈2堂課（價值NT$3,000）</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-users"></i>
+                    <span>兩人同行 - 享85折優惠</span>
+                </div>
+            </div>
+
+            <div class="countdown-timer">
+                <h3><i class="fas fa-hourglass-half"></i> 優惠結束倒數：</h3>
+                <div class="timer-display">
+                    <div class="timer-unit">
+                        <span id="days">09</span>
+                        <label>天</label>
+                    </div>
+                    <div class="timer-unit">
+                        <span id="hours">00</span>
+                        <label>小時</label>
+                    </div>
+                    <div class="timer-unit">
+                        <span id="minutes">00</span>
+                        <label>分</label>
+                    </div>
+                    <div class="timer-unit">
+                        <span id="seconds">00</span>
+                        <label>秒</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer-cta">
+                <button class="cta-button primary large" onclick="openContactModal()">把握優惠立即報名</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA - 第十屏 -->
+    <section id="final-cta" class="final-cta-section">
+        <div class="container">
+            <h2 class="section-title">是時候讓您的聲音施展魔法了</h2>
+
+            <div class="final-value-props">
+                <div class="value-prop">台灣唯一專業服務</div>
+                <div class="value-prop">300+成功案例</div>
+                <div class="value-prop">無風險免費體驗</div>
+                <div class="value-prop">滿意度95%保證</div>
+            </div>
+
+            <div class="final-cta-buttons">
+                <button class="cta-button secondary" onclick="scrollToSection('free-offer')">預約免費檢測</button>
+                <button class="cta-button primary" onclick="openContactModal()">直接報名課程</button>
+            </div>
+
+            <div class="guarantee-badge">
+                <div class="guarantee-text">
+                    <strong>30天滿意保證</strong><br>
+                    如果您在第一個月內不滿意，無條件全額退費
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section contact-info">
+                    <h3><i class="fas fa-info-circle"></i> 聯絡資訊</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>手機：0900-XXX-XXX</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email：iam@tznthou.com</span>
+                    </div>
+                </div>
+
+                <div class="footer-section quick-links">
+                    <h3><i class="fas fa-link"></i> 快速連結</h3>
+                    <ul>
+                        <li><a href="#about">關於我們</a></li>
+                        <li><a href="#services">課程介紹</a></li>
+                        <li><a href="#testimonials">學員見證</a></li>
+                        <li><a href="#faq">常見問題</a></li>
+                        <li><a href="#privacy">隱私政策</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section social-media">
+                    <h3><i class="fas fa-share-alt"></i> 聯絡方式</h3>
+                    <div class="social-links">
+                        <a href="https://tznthou.com" class="social-link" target="_blank"><i class="fas fa-globe"></i> Website</a>
+                        <a href="https://www.threads.com/@tznthou" class="social-link" target="_blank"><i class="fab fa-threads"></i> Threads</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 tznthou.com 版權所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 浮動 CTA 按鈕 -->
+    <div id="floating-cta" class="floating-cta hidden">
+        <button class="cta-button primary" onclick="scrollToSection('free-offer')">
+            免費聲音檢測
+        </button>
+    </div>
+
+    <!-- 聯絡表單 Modal -->
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactModal()">&times;</span>
+            <h2>聯絡我們</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="contactName">姓名 *</label>
+                    <input type="text" id="contactName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactPhone">手機 *</label>
+                    <input type="tel" id="contactPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email *</label>
+                    <input type="email" id="contactEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactPlan">感興趣的方案</label>
+                    <select id="contactPlan" name="plan">
+                        <option value="">請選擇</option>
+                        <option value="標準方案">標準方案</option>
+                        <option value="專業方案">專業方案</option>
+                        <option value="了解更多">先了解更多</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">留言</label>
+                    <textarea id="contactMessage" name="message" rows="4" placeholder="請告訴我們您的需求或問題..."></textarea>
+                </div>
+                <button type="submit" class="cta-button primary">送出詢問</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
