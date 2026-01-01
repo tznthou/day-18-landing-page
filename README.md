@@ -4,7 +4,7 @@
 [![Vanilla JS](https://img.shields.io/badge/Vanilla-JavaScript-f7df1e.svg)](https://developer.mozilla.org/docs/Web/JavaScript)
 [![CSS3](https://img.shields.io/badge/CSS3-Responsive-264de4.svg)](https://developer.mozilla.org/docs/Web/CSS)
 
-[← 回到 Muripo HQ](https://github.com/tznthou/muripo-hq)
+[← 回到 Muripo HQ](https://github.com/tznthou/muripo-hq) | [English](README_EN.md)
 
 這是我開始學習 Vibe Coding 後製作的第一個 Landing Page。
 
@@ -101,3 +101,9 @@ day-18-landing-page/
 ## 授權
 
 [MIT License](LICENSE)
+
+---
+
+## 作者
+
+子超 - [tznthou@gmail.com](mailto:tznthou@gmail.com)
